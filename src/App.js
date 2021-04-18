@@ -3,7 +3,7 @@ import {
   Container,
   CssBaseline,
   makeStyles,
-  ThemeProvider,
+  ThemeProvider
 } from "@material-ui/core";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -20,7 +20,7 @@ import WatchList from "./pages/WatchList";
 import theme from "./theme";
 
 const client = new ApolloClient({
-  uri: "https://animeflix-server.herokuapp.com/",
+  uri: "https://animeflix-server.herokuapp.com/graphql",
   cache: new InMemoryCache(),
 });
 
