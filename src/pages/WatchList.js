@@ -39,6 +39,7 @@ const WatchList = () => {
 
   return (
     <div className="top_animes_section">
+      {console.log(data)}
       <Typography variant="h4" className="top_heading">
         Your Watchlist
       </Typography>
