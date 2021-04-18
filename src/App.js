@@ -20,7 +20,7 @@ import WatchList from "./pages/WatchList";
 import theme from "./theme";
 
 const client = new ApolloClient({
-  uri: "https://animeflix-server.herokuapp.com/graphql",
+  uri: "/graphql",
   cache: new InMemoryCache(),
 });
 
