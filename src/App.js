@@ -25,7 +25,7 @@ import WatchList from "./pages/WatchList";
 import theme from "./theme";
 
 const link = createHttpLink({
-  uri: "/graphql",
+  uri: "https://animeflix-server.herokuapp.com/graphql",
   credentials: "include",
 });
 
