@@ -1,9 +1,14 @@
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import {
+  ApolloClient,
+  ApolloProvider,
+  createHttpLink,
+  InMemoryCache,
+} from "@apollo/client";
 import {
   Container,
   CssBaseline,
   makeStyles,
-  ThemeProvider
+  ThemeProvider,
 } from "@material-ui/core";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -19,9 +24,14 @@ import StudioAnime from "./pages/StudioAnime";
 import WatchList from "./pages/WatchList";
 import theme from "./theme";
 
+const link = createHttpLink({
+  uri: "/graphql",
+  credentials: "include",
+});
+
 const client = new ApolloClient({
-  uri: "https://animeflix-server.herokuapp.com/graphql",
   cache: new InMemoryCache(),
+  link,
 });
 
 const useStyles = makeStyles((theme) => ({
